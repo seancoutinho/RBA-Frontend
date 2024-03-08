@@ -12,18 +12,18 @@ const ProductList = () => {
   }, []);
 
   const getProducts = async () => {
-    const response = await axios.get("http://localhost:5000/products");
+    const response = await axios.get("https://elmala-db-backend.onrender.com/products");
     setProducts(response.data);
 
   };
 
 
   const deleteProduct = async (productId) => {
-    await axios.delete(`http://localhost:5000/products/${productId}`);
+    await axios.delete(`https://elmala-db-backend.onrender.com/products/${productId}`);
     getProducts();
   };
   const viewProduct = async (productId) => {
-    await axios.get(`http://localhost:5000/products/${productId}`);
+    await axios.get(`https://elmala-db-backend.onrender.com/products/${productId}`);
     getProducts();
   };
 
