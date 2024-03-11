@@ -22,7 +22,7 @@ const FormAddUser = () => {
         role: role,
       });
       navigate("/users");
-    } catch (error) {
+    } catch (error) { 
       if (error.response) {
         setMsg(error.response.data.msg);
       }

@@ -19,7 +19,7 @@ const FormAddProduct = () => {
   const saveProduct = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("https://elmala-db-backend.onrender.com/products", {
+      await axios.post("https://elmala-db-backend.onrender.com/products", { 
         name: name,
         representative: representative,
         details:details,
