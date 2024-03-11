@@ -31,7 +31,7 @@ const FormEditUser = () => {
   const updateUser = async (e) => {
     e.preventDefault();
     try {
-      await axios.patch(`https://elmala-db-backend.onrender.com:5001/users/${id}`, {
+      await axios.patch(`https://elmala-db-backend.onrender.com/users/${id}`, {
         name: name,
         email: email,
         password: password,
