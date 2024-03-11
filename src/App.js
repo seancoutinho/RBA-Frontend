@@ -12,7 +12,7 @@ import Notes from "./notes/Render";
 function App() {
   return (
     <div>
-      <BrowserRouter basename="/elmala-db">
+      <BrowserRouter >
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/dashboard" element={<Dashboard />} />
