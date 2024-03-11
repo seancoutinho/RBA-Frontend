@@ -24,16 +24,16 @@ export const LoginUser = createAsyncThunk("user/LoginUser", async(user, thunkAPI
     }
 });
 
-export const getMe = createAsyncThunk("user/getMe", async(_, thunkAPI) => {
-    try {
-        const response = await axios.get('https://elmala-db-backend.onrender.com/me');
-        return response.data;
-    } catch (error) {
-        if(error.response){
-            const message = error.response.data.msg;
-            return thunkAPI.rejectWithValue(message);
-        }
-    }
+export const getMe = createAsyncThunk( async(_, thunkAPI) => {
+    //try {
+       // const response = await axios.get('https://elmala-db-backend.onrender.com/me');
+       // return response.data;
+    //} catch (error) {
+       // if(error.response){
+           // const message = error.response.data.msg;
+           // return thunkAPI.rejectWithValue(message);
+       // }
+    //}
 });
 
 export const LogOut = createAsyncThunk("user/LogOut", async() => {
