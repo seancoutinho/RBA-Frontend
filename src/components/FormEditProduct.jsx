@@ -16,7 +16,7 @@ const FormEditProduct = () => {
     const getProductById = async () => {
       try {
         const response = await axios.get(
-          `https://elmala-db-backend.onrender.com/products/${id}`
+          `https://rba-backend-yi2x.onrender.com/products/${id}`
         );
         setName(response.data.name);
         setRep(response.data.representative);
@@ -35,7 +35,7 @@ const FormEditProduct = () => {
   const updateProduct = async (e) => {
     e.preventDefault();
     try {
-      await axios.patch(`https://elmala-db-backend.onrender.com/products/${id}`, {
+      await axios.patch(`https://rba-backend-yi2x.onrender.com/products/${id}`, {
         name: name,
         representative: representative,
         details: details,

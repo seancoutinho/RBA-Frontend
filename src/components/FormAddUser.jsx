@@ -14,7 +14,7 @@ const FormAddUser = () => {
   const saveUser = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("https://elmala-db-backend.onrender.com/users", {
+      await axios.post("https://rba-backend-yi2x.onrender.com/users", {
         name: name,
         email: email,
         password: password,

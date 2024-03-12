@@ -15,7 +15,7 @@ const FormEditUser = () => {
   useEffect(() => {
     const getUserById = async () => {
       try {
-        const response = await axios.get(`https://elmala-db-backend.onrender.com/users/${id}`);
+        const response = await axios.get(`https://rba-backend-yi2x.onrender.com/users/${id}`);
         setName(response.data.name);
         setEmail(response.data.email);
         setRole(response.data.role);
@@ -31,7 +31,7 @@ const FormEditUser = () => {
   const updateUser = async (e) => {
     e.preventDefault();
     try {
-      await axios.patch(`https://elmala-db-backend.onrender.com/users/${id}`, {
+      await axios.patch(`https://rba-backend-yi2x.onrender.com/users/${id}`, {
         name: name,
         email: email,
         password: password,
