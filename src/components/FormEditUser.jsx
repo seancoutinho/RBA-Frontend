@@ -31,7 +31,7 @@ const FormEditUser = () => {
   const updateUser = async (e) => {
     e.preventDefault();
     try {
-      await axios.patch(`https://rba-backend-yi2x.onrender.com/users/${id}`, {
+      await axios.patch(`rba-backend-production.up.railway.app/users/${id}`, {
         name: name,
         email: email,
         password: password,

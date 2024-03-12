@@ -35,7 +35,7 @@ const FormEditProduct = () => {
   const updateProduct = async (e) => {
     e.preventDefault();
     try {
-      await axios.patch(`https://rba-backend-yi2x.onrender.com/products/${id}`, {
+      await axios.patch(`rba-backend-production.up.railway.app/products/${id}`, {
         name: name,
         representative: representative,
         details: details,
