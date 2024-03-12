@@ -26,7 +26,7 @@ export const LoginUser = createAsyncThunk("user/LoginUser", async(user, thunkAPI
 
 export const getMe = createAsyncThunk("user/getMe", async(_, thunkAPI) => {
     try {
-        const response = await axios.get('https://rba-backend-yi2x.onrender.com/products');
+        const response = await axios.get('https://rba-backend-yi2x.onrender.com/me');
         return response.data;
     } catch (error) {
         if(error.response){
