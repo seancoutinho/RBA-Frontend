@@ -15,6 +15,9 @@ export const LoginUser = createAsyncThunk("user/LoginUser", async(user, thunkAPI
             email: user.email,
             password: user.password
         });
+        const option = {
+            credentials: 'include'
+          }
         return response.data;
     } catch (error) {
         if(error.response){
@@ -27,6 +30,9 @@ export const LoginUser = createAsyncThunk("user/LoginUser", async(user, thunkAPI
 export const getMe = createAsyncThunk("user/getMe", async(_, thunkAPI) => {
     try {
         const response = await axios.get('https://backend-service-n90w.onrender.com/me');
+        const option = {
+            credentials: 'include'
+          }
         return response.data;
     } catch (error) {
         if(error.response){
@@ -39,6 +45,9 @@ export const getMe = createAsyncThunk("user/getMe", async(_, thunkAPI) => {
 export const LogOut = createAsyncThunk("user/LogOut", async() => {
     await axios.delete('https://backend-service-n90w.onrender.com/logout');
 });
+const option = {
+    credentials: 'include'
+  }
 
 export const authSlice = createSlice({
     name: "auth",
