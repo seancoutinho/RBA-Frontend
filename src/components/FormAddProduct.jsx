@@ -19,7 +19,7 @@ const FormAddProduct = () => {
   const saveProduct = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:5001/products", {
+      await axios.post("http://rba-backend-production.up.railway.app/products", {
         name: name,
         representative: representative,
         details:details,

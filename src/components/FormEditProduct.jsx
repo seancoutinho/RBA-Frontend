@@ -16,7 +16,7 @@ const FormEditProduct = () => {
     const getProductById = async () => {
       try {
         const response = await axios.get(
-          `http://localhost:5001/products/${id}`
+          `http://rba-backend-production.up.railway.app/products/${id}`
         );
         setName(response.data.name);
         setRep(response.data.representative);
@@ -35,7 +35,7 @@ const FormEditProduct = () => {
   const updateProduct = async (e) => {
     e.preventDefault();
     try {
-      await axios.patch(`http://localhost:5001/products/${id}`, { 
+      await axios.patch(`http://rba-backend-production.up.railway.app/products/${id}`, { 
         name: name,
         representative: representative,
         details: details,
