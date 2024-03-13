@@ -14,7 +14,7 @@ const FormAddUser = () => {
   const saveUser = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("rba-backend-production.up.railway.app/users", {
+      await axios.post("http://localhost:5001/users", {
         name: name,
         email: email,
         password: password,

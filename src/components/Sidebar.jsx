@@ -4,8 +4,7 @@ import { NavLink, useNavigate } from "react-router-dom";
 import { IoPerson, IoPricetag, IoHome, IoLogOut, IoBook, IoNewspaper } from "react-icons/io5";
 import { useDispatch, useSelector } from "react-redux";
 import { LogOut, reset } from "../features/authSlice";
-import Datepicker from "react-datepicker"
-import "react-datepicker/dist/react-datepicker.css"
+import Reactdatepicker from "./datepicker"
 
 
 
@@ -70,16 +69,8 @@ const Sidebar = () => {
           </li>
         </ul>
         <p className="menu-label">Calendar</p>
-        <div className="">
-          <Datepicker
-            selected={selectDate}
-            onChange={HandleDate}
-            dateFormat="MM-DD-YYYY"
-          />
-
-
-        </div>
-
+        <Reactdatepicker/>
+       
       </aside>
     </div>
   );

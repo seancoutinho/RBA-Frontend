@@ -10,7 +10,8 @@ const Sidebar = ({
     return (
       <div className="app-sidebar">
         <div className="app-sidebar-header">
-          <h1>Notes</h1>
+          <h1><strong> Notes</strong> </h1>
+          <a href="/products"><button className="buckets" >Back</button></a>
           <button onClick={onAddNote}>Add</button>
         </div>
         <div className="app-sidebar-notes">

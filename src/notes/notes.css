@@ -21,7 +21,9 @@ button {
 button:hover {
   color: #04c;
 }
-
+.buckets{
+  color: red;
+}
 .App {
   display: flex;
 }

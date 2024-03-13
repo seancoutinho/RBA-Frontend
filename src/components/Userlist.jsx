@@ -10,12 +10,12 @@ const Userlist = () => {
   }, []);
 
   const getUsers = async () => {
-    const response = await axios.get("https://elmala-db-backend.onrender.com/users");
+    const response = await axios.get("http://localhost:5001/users");
     setUsers(response.data);
   };
 
   const deleteUser = async (userId) => {
-    await axios.delete(`https://elmala-db-backend.onrender.com/users/${userId}`);
+    await axios.delete(`http://localhost:5001/users/${userId}`);
     getUsers();
   };
 
@@ -33,7 +33,7 @@ const Userlist = () => {
             <th>Name</th>
             <th>Email</th>
             <th>Role</th>
-            <th>Actions</th>
+            <th>Actions</th> 
           </tr>
         </thead>
         <tbody>

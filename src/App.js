@@ -12,8 +12,8 @@ import Notes from "./notes/Render";
 function App() {
   return (
     <div>
-      <BrowserRouter >
-        <Routes>
+      <BrowserRouter>
+        <Routes> 
           <Route path="/" element={<Login />} />
           <Route path="/dashboard" element={<Dashboard />} />
           <Route path="/users" element={<Users />} />

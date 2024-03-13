@@ -19,7 +19,7 @@ const FormAddProduct = () => {
   const saveProduct = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("https://rba-backend-yi2x.onrender.com/products", { 
+      await axios.post("http://localhost:5001/products", {
         name: name,
         representative: representative,
         details:details,
