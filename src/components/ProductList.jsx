@@ -12,18 +12,18 @@ const ProductList = () => {
   }, []);
 
   const getProducts = async () => {
-    const response = await axios.get("http://rba-backend-production.up.railway.app/products");
+    const response = await axios.get("https://backend-service-n90w.onrender.com/products");
     setProducts(response.data);
 
   };
 
 
   const deleteProduct = async (productId) => {
-    await axios.delete(`http://rba-backend-production.up.railway.app/products/${productId}`);
+    await axios.delete(`https://backend-service-n90w.onrender.com/products/${productId}`);
     getProducts();
   };
   const viewProduct = async (productId) => {
-    await axios.get(`http://rba-backend-production.up.railway.app/products/${productId}`);
+    await axios.get(`https://backend-service-n90w.onrender.com/products/${productId}`);
     getProducts();
   };
 

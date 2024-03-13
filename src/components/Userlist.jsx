@@ -10,12 +10,12 @@ const Userlist = () => {
   }, []);
 
   const getUsers = async () => {
-    const response = await axios.get("http://localhost:5001/users");
+    const response = await axios.get("https://backend-service-n90w.onrender.com/users");
     setUsers(response.data);
   };
 
   const deleteUser = async (userId) => {
-    await axios.delete(`http://localhost:5001/users/${userId}`);
+    await axios.delete(`https://backend-service-n90w.onrender.com/users/${userId}`);
     getUsers();
   };
 

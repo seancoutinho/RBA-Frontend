@@ -11,7 +11,7 @@ const initialState = {
 
 export const LoginUser = createAsyncThunk("user/LoginUser", async(user, thunkAPI) => {
     try {
-        const response = await axios.post('http://rba-backend-production.up.railway.app/login', {
+        const response = await axios.post('https://backend-service-n90w.onrender.com/login', {
             email: user.email,
             password: user.password
         });
@@ -26,7 +26,7 @@ export const LoginUser = createAsyncThunk("user/LoginUser", async(user, thunkAPI
 
 export const getMe = createAsyncThunk("user/getMe", async(_, thunkAPI) => {
     try {
-        const response = await axios.get('http://rba-backend-production.up.railway.app/me');
+        const response = await axios.get('https://backend-service-n90w.onrender.com/me');
         return response.data;
     } catch (error) {
         if(error.response){
@@ -37,7 +37,7 @@ export const getMe = createAsyncThunk("user/getMe", async(_, thunkAPI) => {
 });
 
 export const LogOut = createAsyncThunk("user/LogOut", async() => {
-    await axios.delete('http://rba-backend-production.up.railway.app/logout');
+    await axios.delete('https://backend-service-n90w.onrender.com/logout');
 });
 
 export const authSlice = createSlice({

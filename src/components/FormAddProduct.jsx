@@ -19,7 +19,7 @@ const FormAddProduct = () => {
   const saveProduct = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://rba-backend-production.up.railway.app/products", {
+      await axios.post("https://backend-service-n90w.onrender.com/products", {
         name: name,
         representative: representative,
         details:details,
