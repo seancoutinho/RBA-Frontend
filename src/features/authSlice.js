@@ -28,7 +28,7 @@ export const LoginUser = createAsyncThunk("user/LoginUser", async(user, thunkAPI
 export const getMe = createAsyncThunk("user/getMe", async(_, thunkAPI) => {
     try {
         const response = await axios.get('https://backend-service-n90w.onrender.com/me');
-        console.log(getMe)
+        console.log(response)
         return response.data;
     } catch (error) {
         if(error.response){
