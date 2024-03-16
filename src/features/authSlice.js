@@ -15,7 +15,7 @@ export const LoginUser = createAsyncThunk("user/LoginUser", async (user, thunkAP
             email: user.email,
             password: user.password
         }, {
-            mode: 'Access-Control-Allow-Origin', // This is where you specify that you want to use CORS
+            mode: 'cors', // This is where you specify that you want to use CORS
         });
 
         return response.data;
@@ -30,7 +30,7 @@ export const LoginUser = createAsyncThunk("user/LoginUser", async (user, thunkAP
 export const getMe = createAsyncThunk("user/getMe", async (_, thunkAPI) => {
     try {
         const response = await axios.get('https://backend-service-n90w.onrender.com/me', {
-            mode: 'Access-Control-Allow-Origin', // Specify CORS mode
+            mode: 'cors', // Specify CORS mode
         });
         console.log(response)
         return response.data;
@@ -44,7 +44,7 @@ export const getMe = createAsyncThunk("user/getMe", async (_, thunkAPI) => {
 
 export const LogOut = createAsyncThunk("user/LogOut", async () => {
     await axios.delete('https://backend-service-n90w.onrender.com/logout', {
-        mode: 'Access-Control-Allow-Origin', // Specify CORS mode
+        mode: 'cors', // Specify CORS mode
     });
 });
 
