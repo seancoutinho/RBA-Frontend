@@ -12,10 +12,10 @@ const initialState = {
 export const LoginUser = createAsyncThunk("user/LoginUser", async (user, thunkAPI) => {
     try {
         const response = await axios.post('https://backend-service-n90w.onrender.com/login', {
-            mode: 'cors', // Specify CORS mode
-        }, {
             email: user.email,
             password: user.password
+        }, {
+            mode: 'cors', // This is where you specify that you want to use CORS
         });
 
         return response.data;
