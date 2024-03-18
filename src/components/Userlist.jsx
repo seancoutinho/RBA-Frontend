@@ -10,12 +10,12 @@ const Userlist = () => {
   }, []);
 
   const getUsers = async () => {
-    const response = await axios.get("https://corsproxy.io/?https://average-lime-shoulder-pads.cyclic.app/users");
+    const response = await axios.get("https://average-lime-shoulder-pads.cyclic.app/users");
     setUsers(response.data);
   };
 
   const deleteUser = async (userId) => {
-    await axios.delete(`https://corsproxy.io/?https://average-lime-shoulder-pads.cyclic.app/users/${userId}`);
+    await axios.delete(`https://average-lime-shoulder-pads.cyclic.app/users/${userId}`);
     getUsers();
   };
 

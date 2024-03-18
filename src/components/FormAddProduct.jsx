@@ -19,7 +19,7 @@ const FormAddProduct = () => {
   const saveProduct = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("https://corsproxy.io/?https://average-lime-shoulder-pads.cyclic.app/products", {
+      await axios.post("https://average-lime-shoulder-pads.cyclic.app/products", {
         name: name,
         representative: representative,
         details:details,

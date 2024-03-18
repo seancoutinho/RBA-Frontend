@@ -10,16 +10,16 @@ const ProductList = () => {
   }, []);
 
   const getProducts = async () => {
-    const response = await axios.get("https://corsproxy.io/?https://average-lime-shoulder-pads.cyclic.app//products");
+    const response = await axios.get("https://average-lime-shoulder-pads.cyclic.app/products");
     setProducts(response.data);
   };
 
   const deleteProduct = async (productId) => {
-    await axios.delete(`https://corsproxy.io/?https://average-lime-shoulder-pads.cyclic.app//products/${productId}`);
+    await axios.delete(`https://average-lime-shoulder-pads.cyclic.app/products/${productId}`);
     getProducts();
   };
   const viewProduct = async (productId) => {
-    await axios.get(`https://corsproxy.io/?https://average-lime-shoulder-pads.cyclic.app//products/${productId}`);
+    await axios.get(`https://average-lime-shoulder-pads.cyclic.app/products/${productId}`);
     getProducts();
   };
 

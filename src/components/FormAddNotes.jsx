@@ -15,7 +15,7 @@ const FormAddNotes = () => {
   const saveNote = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("https://corsproxy.io/?https://average-lime-shoulder-pads.cyclic.app/notes", {
+      await axios.post("https://average-lime-shoulder-pads.cyclic.app/notes", {
         name: name,
         details: details,
         status: status,
