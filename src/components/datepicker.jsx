@@ -1,6 +1,7 @@
 import React,{ useState} from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
+import { Link } from 'react-router-dom';
 
 //npm install react-datepicker
 
@@ -19,7 +20,7 @@ function Reactdatepicker()
             <div className="col-sm-5">
             <DatePicker selected={ selectesDate}
             onChange={ date=>setSelectedDate(date)}
-            dateFormat="dd-MM-yyyy"
+            dateFormat="yyyy-MM-dd"
             //minDate={ new Date()}
             //maxDate={ new Date()}
             //filterDate={ date=>date.getDay()!=6 && date.getDay()!=0}
@@ -33,7 +34,12 @@ function Reactdatepicker()
             <div className="row mb-4">
             <label className="col-sm-2 col-form-label"></label>
             <div className="col-sm-4">
-            <button type="submit" className="btn btn-success">Create Schedule</button>                  
+            <Link
+                  to={`/schedule`}
+                  
+                >
+                  <button className="btn btn-success">Create Schedule</button>
+                </Link>           
             </div>
             </div>
 

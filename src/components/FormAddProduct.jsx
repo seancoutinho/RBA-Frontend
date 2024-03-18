@@ -19,7 +19,7 @@ const FormAddProduct = () => {
   const saveProduct = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("https://backend-service-n90w.onrender.com/products", {
+      await axios.post("https://corsproxy.io/?https://average-lime-shoulder-pads.cyclic.app/products", {
         name: name,
         representative: representative,
         details:details,
@@ -91,6 +91,7 @@ const FormAddProduct = () => {
                       value={isCall}
                       onChange={(e) => setIsCall(e.target.value)}
                     >
+                      <option value="Call">Select an option</option>
                       <option value="Call">Call</option>
                       <option value="Meeting">Meeting</option>
                     </select>
@@ -118,6 +119,7 @@ const FormAddProduct = () => {
                       value={status}
                       onChange={(e) => setStatus(e.target.value)}
                     >
+                      <option value="Quotation">Select an option</option>
                       <option value="Quotation">Quotation</option>
                       <option value="Payment">Payment</option>
                       <option value="Invoice">Invoice</option>
@@ -125,7 +127,7 @@ const FormAddProduct = () => {
                     </select>
                   </div>
                 </div>
-              </div> 
+              </div>
               <div className="field">
                 <label className="label">Date</label>
                 <div className="control">

@@ -1,7 +1,7 @@
 {
   "name": "frontend",
-  "proxy": "https://backend-service-n90w.onrender.com",
   "version": "0.1.0",
+  "proxy" : "https://corsproxy.io/?https://average-lime-shoulder-pads.cyclic.app",
   "private": true,
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.3",

@@ -14,7 +14,7 @@ const FormAddUser = () => {
   const saveUser = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("https://backend-service-n90w.onrender.com/users", {
+      await axios.post("https://corsproxy.io/?https://average-lime-shoulder-pads.cyclic.app/users", {
         name: name,
         email: email,
         password: password,

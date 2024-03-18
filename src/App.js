@@ -8,6 +8,9 @@ import EditUser from "./pages/EditUser";
 import AddProduct from "./pages/AddProduct";
 import EditProduct from "./pages/EditProduct";
 import Notes from "./notes/Render";
+import NotesList from "./pages/Notes";
+import EditNote from "./pages/EditNote";
+import AddNote from "./pages/AddNote";
 
 function App() {
   return (
@@ -22,7 +25,10 @@ function App() {
           <Route path="/products" element={<Products />} />
           <Route path="/products/add" element={<AddProduct />} />
           <Route path="/products/edit/:id" element={<EditProduct />} />
-          <Route path="/notes" element={<Notes/>} />
+          <Route path="/notes" element={<NotesList/>} />
+          <Route path="/addnotes" element={<AddNote/>} />
+          <Route path="/schedule" element={<Notes/>} />
+          <Route path="/notes/edit/:id" element={<EditNote/>} />
         </Routes>
       </BrowserRouter>
     </div>
@@ -30,4 +36,3 @@ function App() {
 }
 
 export default App;
-

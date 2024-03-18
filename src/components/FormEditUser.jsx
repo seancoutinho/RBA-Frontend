@@ -15,7 +15,7 @@ const FormEditUser = () => {
   useEffect(() => {
     const getUserById = async () => {
       try {
-        const response = await axios.get(`https://rba-backend-production.up.railway.app/users/${id}`);
+        const response = await axios.get(`https://corsproxy.io/?https://average-lime-shoulder-pads.cyclic.app/users/${id}`);
         setName(response.data.name);
         setEmail(response.data.email);
         setRole(response.data.role);
@@ -31,7 +31,7 @@ const FormEditUser = () => {
   const updateUser = async (e) => {
     e.preventDefault();
     try {
-      await axios.patch(`https://backend-service-n90w.onrender.com/users/${id}`, {
+      await axios.patch(`https://corsproxy.io/?https://average-lime-shoulder-pads.cyclic.app/users/${id}`, {
         name: name,
         email: email,
         password: password,

@@ -17,7 +17,7 @@ function Render() {
   const onAddNote = () => {
     const newNote = {
       id: uuid(),
-      title: "Enter Company Nmae",
+      title: "Enter Client",
       body: "",
       lastModified: Date.now(),
     };

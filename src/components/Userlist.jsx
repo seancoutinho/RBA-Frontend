@@ -10,12 +10,12 @@ const Userlist = () => {
   }, []);
 
   const getUsers = async () => {
-    const response = await axios.get("https://backend-service-n90w.onrender.com/users");
+    const response = await axios.get("https://corsproxy.io/?https://average-lime-shoulder-pads.cyclic.app/users");
     setUsers(response.data);
   };
 
   const deleteUser = async (userId) => {
-    await axios.delete(`https://backend-service-n90w.onrender.com/users/${userId}`);
+    await axios.delete(`https://corsproxy.io/?https://average-lime-shoulder-pads.cyclic.app/users/${userId}`);
     getUsers();
   };
 
@@ -33,7 +33,7 @@ const Userlist = () => {
             <th>Name</th>
             <th>Email</th>
             <th>Role</th>
-            <th>Actions</th> 
+            <th>Actions</th>
           </tr>
         </thead>
         <tbody>

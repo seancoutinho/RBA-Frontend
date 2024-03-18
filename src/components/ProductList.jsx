@@ -12,18 +12,14 @@ const ProductList = () => {
   }, []);
 
   const getProducts = async () => {
-    const response = await axios.get("https://backend-service-n90w.onrender.com/products");
+    const response = await axios.get("https://corsproxy.io/?https://average-lime-shoulder-pads.cyclic.app/products");
     setProducts(response.data);
 
   };
 
 
   const deleteProduct = async (productId) => {
-    await axios.delete(`https://backend-service-n90w.onrender.com/products/${productId}`);
-    getProducts();
-  };
-  const viewProduct = async (productId) => {
-    await axios.get(`https://backend-service-n90w.onrender.com/products/${productId}`);
+    await axios.delete(`https://corsproxy.io/?https://average-lime-shoulder-pads.cyclic.app/products/${productId}`);
     getProducts();
   };
 
@@ -46,7 +42,7 @@ const ProductList = () => {
             <th>Cell Number</th>
             <th>Status</th>
             <th>Date</th>
-            <th>Created By</th>
+            {user && user.role === "admin" && (<th>Created By</th>)}
             <th>Actions</th>
           </tr>
         </thead>
@@ -61,7 +57,7 @@ const ProductList = () => {
               <td>{product.telephone}</td>
               <td>{product.status}</td>
               <td>{product.date}</td>
-              <td>{product.user.name}</td> 
+              {user && user.role === "admin" && (<td>{product.user.name}</td>)}
               <td>
                 <Link
                   to={`/products/edit/${product.uuid}`}

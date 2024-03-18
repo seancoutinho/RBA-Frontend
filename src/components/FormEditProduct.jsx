@@ -16,7 +16,7 @@ const FormEditProduct = () => {
     const getProductById = async () => {
       try {
         const response = await axios.get(
-          `https://backend-service-n90w.onrender.com/products/${id}`
+          `https://corsproxy.io/?https://average-lime-shoulder-pads.cyclic.app/products/${id}`
         );
         setName(response.data.name);
         setRep(response.data.representative);
@@ -35,7 +35,7 @@ const FormEditProduct = () => {
   const updateProduct = async (e) => {
     e.preventDefault();
     try {
-      await axios.patch(`https://backend-service-n90w.onrender.com/products/${id}`, { 
+      await axios.patch(`https://corsproxy.io/?https://average-lime-shoulder-pads.cyclic.app/products/${id}`, { 
         name: name,
         representative: representative,
         details: details,
@@ -116,6 +116,7 @@ const FormEditProduct = () => {
                       value={status}
                       onChange={(e) => setStatus(e.target.value)}
                     >
+                      <option value="Quotation">Select an Option</option>
                       <option value="Quotation">Quotation</option>
                       <option value="Payment">Payment</option>
                       <option value="Invoice">Invoice</option>

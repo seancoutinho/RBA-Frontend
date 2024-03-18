@@ -34,7 +34,7 @@ const Login = () => {
                 { <p class="has-text-red">{isError}</p> && <figcaption>
                   <p class="has-text-centered has-text-blue">{message}</p>
                   </figcaption>}
-                <h1 className="title is-2">Sign In</h1>
+                <h1 className="title is-2 has-text-centered">Elmala Sports</h1>
                 <div className="field">
                   <label className="label">Email</label>
                   <div className="control">
