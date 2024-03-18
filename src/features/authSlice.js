@@ -32,7 +32,7 @@ export const LoginUser = createAsyncThunk("user/LoginUser", async (user, thunkAP
 
 export const getMe = createAsyncThunk("user/getMe", async (_, thunkAPI) => {
     try {
-        const response = await axios.get('http://localhost:5001/me');
+        const response = await axios.get('https://average-lime-shoulder-pads.cyclic.app/me');
         return response.data;
     } catch (error) {
         if (error.response) {
