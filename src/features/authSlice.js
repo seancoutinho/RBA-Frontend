@@ -13,7 +13,7 @@ const initialState = {
 
 export const LoginUser = createAsyncThunk("user/LoginUser", async (user, thunkAPI) => {
     try {
-        const response = await axios.post('https://corsproxy.io/?https://average-lime-shoulder-pads.cyclic.app/login', {
+        const response = await axios.post('http://locahost:5001/login', {
             email: user.email,
             password: user.password
         });
