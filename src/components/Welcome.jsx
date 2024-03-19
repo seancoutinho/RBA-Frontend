@@ -43,9 +43,6 @@ const Welcome = () => {
             </button>
           </a>
         </div>
-
-
-
       </div>
     </section>
 
