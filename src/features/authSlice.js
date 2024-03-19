@@ -16,11 +16,6 @@ export const LoginUser = createAsyncThunk("user/LoginUser", async (user, thunkAP
         const response = await axios.post('https://corsproxy.io/?https://average-lime-shoulder-pads.cyclic.app/login', {
             email: user.email,
             password: user.password
-        },
-        {
-          headers: {
-            "Content-Type": "application/json",
-          },
         });
         let resp =  response.data;
         console.log()
@@ -39,7 +34,7 @@ export const LoginUser = createAsyncThunk("user/LoginUser", async (user, thunkAP
 
 export const getMe = createAsyncThunk("user/getMe", async (_, thunkAPI) => {
     try {
-        const response = await axios.get('https://corsproxy.io/?https://average-lime-shoulder-pads.cyclic.app/me',
+        const response = await axios.get('http://locahost:5001/me',
         {
           headers: {
             "Content-Type": "application/json",
