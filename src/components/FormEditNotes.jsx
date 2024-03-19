@@ -14,7 +14,7 @@ const FormEditNote = () => {
         const getProductById = async () => {
             try {
                 const response = await axios.get(
-                    `https://average-lime-shoulder-pads.cyclic.app/notes/${id}`
+                    `http://localhost:5001/notes/${id}`
                 );
                 setName(response.data.name);
                 setDetails(response.data.details);
@@ -31,7 +31,7 @@ const FormEditNote = () => {
     const updateNotes = async (e) => {
         e.preventDefault();
         try {
-            await axios.patch(`https://average-lime-shoulder-pads.cyclic.app/notes/${id}`, { 
+            await axios.patch(`http://localhost:5001/notes/${id}`, { 
                 name: name,
                 details: details,
                 status: status

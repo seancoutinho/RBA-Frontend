@@ -12,14 +12,14 @@ const ProductList = () => {
   }, []);
 
   const getProducts = async () => {
-    const response = await axios.get("https://average-lime-shoulder-pads.cyclic.app/products");
+    const response = await axios.get("http://localhost:5001/products");
     setProducts(response.data);
 
   };
 
 
   const deleteProduct = async (productId) => {
-    await axios.delete(`https://average-lime-shoulder-pads.cyclic.app/products/${productId}`);
+    await axios.delete(`http://localhost:5001/products/${productId}`);
     getProducts();
   };
 

@@ -13,13 +13,13 @@ function NotesList() {
   }, []);
 
   const getNotes = async () => {
-    const response = await axios.get("https://corsproxy.io/?https://average-lime-shoulder-pads.cyclic.app/notes");
+    const response = await axios.get("http://localhost:5001/notes");
     setNotes(response.data);
   };
 
 
   const deleteNotes = async (noteId) => {
-    await axios.delete(`https://corsproxy.io/?https://average-lime-shoulder-pads.cyclic.app/notes/${noteId}`);
+    await axios.delete(`http://localhost:5001/notes/${noteId}`);
     getNotes();
   };
 

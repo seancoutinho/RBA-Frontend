@@ -13,7 +13,7 @@ const initialState = {
 
 export const LoginUser = createAsyncThunk("user/LoginUser", async (user, thunkAPI) => {
     try {
-        const response = await axios.post('https://average-lime-shoulder-pads.cyclic.app/login', {
+        const response = await axios.post('http://localhost:5001/login', {
             email: user.email,
             password: user.password
         });
@@ -34,7 +34,7 @@ export const LoginUser = createAsyncThunk("user/LoginUser", async (user, thunkAP
 
 export const getMe = createAsyncThunk("user/getMe", async (_, thunkAPI) => {
     try {
-        const response = await axios.get('https://average-lime-shoulder-pads.cyclic.app/me',
+        const response = await axios.get('http://localhost:5001/me',
         {
           headers: {
             "Content-Type": "application/json",
@@ -50,7 +50,7 @@ export const getMe = createAsyncThunk("user/getMe", async (_, thunkAPI) => {
 });
 
 export const LogOut = createAsyncThunk("user/LogOut", async () => {
-    await axios.delete('https://average-lime-shoulder-pads.cyclic.app/logout');
+    await axios.delete('http://localhost:5001/logout');
 });
 
 export const authSlice = createSlice({
